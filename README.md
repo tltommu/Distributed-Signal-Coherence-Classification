@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project implements a machine learning pipeline for the **Distributed Signal Coherence Classification** Kaggle competition.
+This project implements a machine learning pipeline for the **Distributed Signal Coherence Classification** competition.
 
 The objective is to predict whether a signal sample contains **signal incoherence** using engineered numerical features.
 
@@ -262,6 +262,22 @@ Generate the submission file:
 ```
 submission.csv
 ```
+
+
+# Final Spoiler
+
+⚠️ Competition Twist
+
+All the feature columns were intentionally anonymized during the competition to ensure participants focused on true data science techniques rather than domain knowledge. After the competition ended, the actual meaning of the dataset was revealed.
+
+The dataset represented a house auction dataset, where the features corresponded to attributes such as:
+
+- House location
+- Property size
+- Property price
+- Other housing characteristics
+  
+Participants were therefore solving what was essentially a real estate prediction problem, but with the feature meanings hidden to simulate a pure machine learning challenge.
 
 ---
 
