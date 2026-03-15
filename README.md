@@ -113,7 +113,7 @@ MCC is particularly suitable for **imbalanced datasets** because it considers:
 * False positives
 * False negatives
 
-The Kaggle leaderboard uses a **scaled MCC**:
+The leaderboard uses a **scaled MCC**:
 
 ```
 Scaled Score = (MCC + 1) / 2
