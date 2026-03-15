@@ -17,6 +17,23 @@ The pipeline focuses on:
 The final model uses **LightGBM with stratified cross-validation**, threshold optimization, and **Top-K prediction selection**.
 
 ---
+# Repository Content
+
+This repository contains two notebooks:
+
+Competition Pipeline / Submission Notebook
+
+Contains the final LightGBM model pipeline ready for submission
+
+Focused on training, cross-validation, threshold optimization, and generating predictions
+
+Exploratory Analysis & Model Comparison Notebook (LGBM_With_Plot.ipynb)
+
+Includes data exploration, feature analysis, and model diagnostics
+
+Shows Logistic Regression experiments (baseline, removed due to poor performance)
+
+Visualizes feature importance, probability distributions, and MCC threshold optimization
 
 # Dataset
 
@@ -35,6 +52,9 @@ The dataset contains two main files:
 - **Highly imbalanced classification problem**
 - Positive class ≈ **3% of samples**
 - Includes several **random noise features**
+
+### Heatmap illustration of data correlation
+![Heatmap plot](https://github.com/tltommu/Distributed-Signal-Coherence-Classification/blob/main/Screenshot%202026-03-15%20222849.png)
 
 Because of the imbalance, the model uses **class weighting and MCC-based optimization**.
 
@@ -67,6 +87,18 @@ Project Submission
 ---
 
 # Model
+
+Baseline Model: Logistic Regression
+
+A Logistic Regression model was initially tested as a baseline.
+
+Quick to train and interpretable
+
+Performed poorly due to nonlinear feature interactions, extreme class imbalance (~3% positive), and anonymous features
+
+Produced unstable predictions and low MCC
+
+Decision: Removed entirely. The final pipeline uses LightGBM with stratified cross-validation, MCC threshold optimization, and Top-K prediction, which performs much better.
 
 The primary model used is **LightGBM**.
 
